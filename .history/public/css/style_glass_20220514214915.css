@@ -1,0 +1,76 @@
+main {
+  font-family: "Poppins", sans-serif;
+  /* margin: 10% 10%; */
+  width: 100%;
+  color: #426696;
+  /* border: 3px solid black; */
+}
+
+main h1 {
+  color: #426696;
+  color: #27344b;
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 2.5rem;
+}
+
+.glass {
+  z-index: 3;
+  background: white;
+  min-height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(0.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: linear-gradient(to top right, #65dfc9, #6cdbeb); */
+  /* border: 1px solid yellowgreen; */
+}
+/* Games */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+  width: 100%;
+  box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.8);
+  
+}
+/* Games */
+#section-two .card{
+  width: 80%;
+}
+.card-info {
+  text-align: center;
+  color: #426696;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+  border-radius: 5px;
+}
+
+.conclusion-card, .card-cv{
+  color: #426696;
+  padding: 1em;
+  margin: 2em;
+  width: 85%;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+}
+.card-cv {
+  width: 80%;
+  border-radius: 5px;
+}
+.cv-list a {
+  text-decoration: none;
+  color: #426696;
+}
+.img-curve {
+  border-radius: 20px;
+  width: 80%;
+}

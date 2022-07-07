@@ -1,0 +1,1 @@
+<img src="<?php URLROOT; ?>public/images/project/earth.png" alt="">

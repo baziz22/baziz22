@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --background: #f08080;
+}
+:root {
+  --bg: lightcoral;
+  --bg_glassy: rgba(0, 136, 169, 1);
+  --bg2: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+  --clr: black;
+  --btn: blanchedalmond;
+  --btntext: #edf0f1;
+  --bg3: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  --bg_glassylight: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Pure CSS Smooth Scrolling Animation With Just 1 Line of Code */
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.125em;
+}
+#section-one {
+  display: block;
+}
+.circle1 {
+  display: block;
+}
+.object {
+  display: block;
+}
+header {
+  display: flex;
+  margin: auto;
+  width: 98%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 5rem;
+  padding: 5px 5%;
+  /* background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
+
+  box-shadow: 0 0 25px 0 black;
+}
+.nav-toggle-checkbox {
+  display: none;
+}
+nav {
+  width: 100%;
+
+  /* border: 1px solid rgb(220, 89, 89); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* border: 1px solid black; */
+}
+nav ul {
+  /* border: 1px solid rgb(115, 128, 0); */
+  flex: 3;
+}
+nav ul li,
+nav ul li a,
+button {
+  font-family: "Montserrat", sans-serif;
+  /* font-weight: 500; */
+  font-size: 16px;
+  color: var(--btntext);
+  text-decoration: none;
+}
+
+div#img-logo {
+  /* border: 1px solid green; */
+  /* background-image: url(../img/logo.svg) center/cover; */
+}
+#logo {
+  width: 70px;
+}
+div.btn {
+  /*  border: 2px solid green; */
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 10px;
+  /* border: 1px solid black; */
+  /* border: 1px solid green; */
+}
+
+nav li a:hover {
+  background-color: #0088a9; /* Green */
+  color: var(--btntext);
+}
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #0088a9; /* Green */
+  position: relative;
+  top: -0.5em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: all 0.3s ease 0s;
+}
+nav a:hover::before {
+  transform: scale(1, 1);
+}
+
+form {
+  /* font-family: "Oswald", sans-serif; */
+  padding: 5px;
+  margin: 5px;
+}
+
+form #loginform {
+  float: right;
+}
+
+form #login_btn_created {
+  padding: 9px 25px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 136, 169, 1);
+  color: blanchedalmond;
+  transition-duration: 0.4s;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8); /* Green */
+}
+
+.signup-error {
+  text-align: center;
+  border: 1px, solid, red;
+  padding: 10px;
+  color: red;
+}
+
+#first_line_page {
+  /* padding: 12% 10%  0 10%; */
+  min-height: 8rem;
+  /* width: 100%; */
+}
+
+button.btn {
+  padding: 10px 25px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 136, 169, 1);
+  color: blanchedalmond;
+  transition-duration: 0.4s;
+  transition: all 0.3s ease 0s;
+}
+/**********Section Two ***********/
+#section-two {
+  z-index: 99999;
+  /* background: #f08080; */
+  background: lightcoral;
+}
+/**********Section Three ***********/
+#section-three {
+  z-index: 99999;
+  background: #f08080;
+}
+/* The ~ looks for any preceeding sibling, it doesn't have to me immediately after. */
+
+/*********** Responsive Area ****************/
+
+@media screen and (max-width: 500px) {
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    /* https://stackoverflow.com/questions/51003548/css-how-to-make-header-background-transparent-on-wordpress/51003629 */
+    background: var(--background);
+    background: transparent;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+  }
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    /* border: 1px solid black; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+  }
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0ms ease-in-out;
+  }
+  .nav-toggle-checkbox:checked ~ nav {
+    display: block;
+    transform: scale(1, 1);
+  }
+  .nav-toggle-checkbox:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 100ms ease-in-out 100ms;
+  }
+
+  /********** typing text Media********/
+
+  #logo-svg {
+    content: "";
+  }
+  #text-area {
+    height: 2em;
+  }
+  #type_text {
+    font-size: 1.5rem;
+  }
+
+  #first_line_page {
+    min-height: 6rem;
+  }
+
+  /**********Section Three Media***********/
+  #section-three {
+  }
+  
+  /**********Footer Responsive ***********/
+  .footer-main-content {
+    flex-direction: column;
+  }
+  .footer-left-and-center {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer-left {
+  }
+  .footer-center {
+    order: 2;
+    margin: 10px;
+    padding: 2px;
+  }
+  .footer-right {
+    all: unset;
+    order: 1;
+  }
+  .copyright {
+    all: unset;
+  }
+
+  .blob-motion {
+    /* transform: translateX(-20%); */
+  }
+  #blob1 {
+    /* fill: orange; */
+    transform: translateX(20%);
+  }
+
+  #blob-motion .blob-motion {
+    width: 110%;
+  }
+
+  .dynamic-txts {
+    transform: translateX(-2%);
+  }
+  #logo-svg {
+    /* width: 3.5em; */
+  }
+  .navigation-right-side .nav-aside {
+    display: none;
+  
+}
