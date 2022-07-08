@@ -1,9 +1,9 @@
 <div class="card">
     <div class="card-info">
         <h2 class="footer-h2"> Games ::: </h2>
+        <br>
         <p>Most of these games are programmed using Javascript, some Java</p>
         <p>Check them out on github or play live on the browser</p>
-        <P>I am still developing them and adding more for fun!</P>
         <br>
         <div class="slideshow-container">
 

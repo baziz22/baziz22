@@ -196,7 +196,7 @@ button.btn {
 
 /*********** Responsive Area ****************/
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   nav {
     position: absolute;
     text-align: left;
@@ -282,10 +282,16 @@ button.btn {
     min-height: 6rem;
   }
 
+  /**********Section Two Media***********/
+  .img-curve {
+    width: 100%;
+    height: 80%;
+  }
+  /********** End of Section Two Media***********/
   /**********Section Three Media***********/
   #section-three {
   }
-  
+  /********** End of Section Three Media***********/
   /**********Footer Responsive ***********/
   .footer-main-content {
     flex-direction: column;
@@ -329,5 +335,5 @@ button.btn {
   }
   .navigation-right-side .nav-aside {
     display: none;
-  
+  }
 }

@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-info">
-        <h2 class="footer-h2"> Data Visualization Using D3js ::: </h2> <br>
+        <h2 class="footer-h2"> Data Visualization Using D3.js ::: </h2> <br>
         <p>The project is about discovering the countries information</p>
         <p> Coming Soon!</p>
         <br>

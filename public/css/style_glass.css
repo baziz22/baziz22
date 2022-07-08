@@ -36,15 +36,16 @@ main h1 {
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.9)
   );
-  width: 90%;
-  height: 90%;
+ 
   box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.8);
   border-radius: 40px;
 }
-#section-three .card{
+#section-two .card{
   width: 100%;
-  height:100%;
-  border-radius: 0;
+  height: 100%;
+}
+#section-three .card{
+    border-radius: 0;
 }
 
 /* Games */
@@ -52,7 +53,7 @@ main h1 {
 }
 .card-info {
   padding: 5px;
-  margin: 2em;
+ /*  margin: 2em; */
   text-align: center;
   color: #426696;
   font-size: clamp(1rem, 3vw, 2rem);
@@ -79,5 +80,4 @@ main h1 {
 }
 .img-curve {
   border-radius: 20px;
-  width: 80%;
 }
