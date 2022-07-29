@@ -1,10 +1,14 @@
 // Get DOM Elements
 const contact_modal = document.querySelector('.contact-modal');
-const modalBtn = document.querySelector('#popup-chat');
+const modalBtn = document.getElementsByClassName('popup-chat');
+
 const closeBtn = document.querySelector('.contact-modal-close');
 
 // Events
-modalBtn.addEventListener('click', openModal);
+for(let i = 0; i < modalBtn.length; i++) {
+  modalBtn[i].addEventListener('click', openModal);
+
+}
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);
 
@@ -16,7 +20,7 @@ function openModal() {
 
 // Close
 function closeModal() {
-  contact_modal.style.display = 'none';
+  contact_modal.style.display = 'none';console.log("close: clicking");
 }
 
 // Close If Outside Click

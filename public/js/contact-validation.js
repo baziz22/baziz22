@@ -1,57 +1,74 @@
-const form = document.getElementById('register-form');
+const contact_form = document.getElementById('contact-form');
+const contact_full_name = document.getElementById('contact-full-name');
 const contact_subject = document.getElementById('contact-subject');
-const email = document.getElementById('contact-email');
+const contact_email = document.getElementById('contact-email');
+const contact_message = document.getElementById('contact-message');
 
-
-form.addEventListener('submit', e => {
+contact_form.addEventListener('submit', e => {
   e.preventDefault();
   validate();
 });
 
 function validate() {
   // get the values from the inputs
-  const firstnameValue = first_name.value.trim();
-  const lastnameValue = last_name.value.trim();
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
+  const full_nameValue = contact_full_name.value.trim();
+  const emailValue = contact_email.value.trim();
+  const subjectValue = contact_subject.value.trim();
+  const messageValue = contact_message.value.trim();
 
-  if (usernameValue === '') {
+  if (full_nameValue === '') {
     // show error
     // add error class
-    setErrorFor(username, 'Username cannot be empty');
+    setErrorFor(contact_full_name, 'Your Name is REQUIRED!');
   } else {
     // add success class
-    setSuccessFor(username);
+    setSuccessFor(contact_full_name);
   }
   if (emailValue === '') {
-    setErrorFor(email, 'Email cannot be empty');
+    setErrorFor(contact_email, 'Email cannot be empty. REQUIRED!');
   } else if (!isEmail(emailValue)) {
-    setErrorFor(email, 'Email is not valid!');
+    setErrorFor(contact_email, 'Email is not valid!');
   } else {
-    setSuccessFor(email);
+    setSuccessFor(contact_email);
   }
-  
+  if (subjectValue === '') {
+    // show error
+    // add error class
+    setErrorFor(contact_subject, 'Enter a topic reflects your message. REQUIRED!');
+  } else {
+    // add success class
+    setSuccessFor(contact_subject);
+  }
+  if (messageValue === '') {
+    // show error
+    // add error class
+    setErrorFor(contact_message, 'How can I help you?! REQUIRED!');
+  } else {
+    // add success class
+    setSuccessFor(contact_message);
+  }
 }
 
 function setErrorFor(input, message) {
-  const formControl = input.parentElement; // .form-control
-  const small = formControl.querySelector('small');
+  const contact_box = input.parentElement; // .form-control
+  const small = contact_box.querySelector('small');
 
   // add error message inside small
   small.innerText = message;
 
   // add error class
-  formControl.className = 'form-control error';
+  contact_box.className = 'contact-box error';
 }
 
 function setSuccessFor(input) {
-  const formControl = input.parentElement;
+  const contact_box = input.parentElement;
   // add success class
-  formControl.className = 'form-control success';
+  contact_box.className = 'contact-box success';
 }
 
-function isEmail(email) {
+function isEmail(contact_email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
+    contact_email
   );
 }
+console.log("Message is loaded")

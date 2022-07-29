@@ -64,33 +64,44 @@
         Your message was sent, thank you!
       </div>
 
-      <form id="contactForm" name="contactForm" class="contactForm" method="POST" enctype="text/plain">
+      <form id="contact-form" name="contact-form" class="contact-form" method="POST" enctype="text/plain">
 
-        <div class="contact-label">
+        <div class="contact-box">
           <span class="fa fa-user"></span>
-          <label class="label" for="contact-name">Full Name</label>
-          <input type="text" class="contact-input contact-email"" name=" contact-name" id="contact-name" />
+          <label class="label" for="contact-full-name">Full Name <span class="asterisk-required">*</span></label>
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+          <input type="text" class="contact-input contact-full-name"" name=" contact-full-name" id="contact-full-name" />
+          
         </div>
-        <div class="contact-label">
+        <div class="contact-box">
           <span class="fa fa-envelope"></span>
-          <label class="label" for="contact-name">Email *</label>
-
+          <label class="label" for="contact-name">Email <span class="asterisk-required">*</span></label>
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+          <input type="text" class="contact-input contact-email" name="contact-email" id="contact-email">
         </div>
-        <input type="email" class="contact-input contact-email" name="contact-email" id="contact-email" required>
 
-        <div class="contact-label">
+        <div class="contact-box">
           <span class="fa fa-pencil"></span>
-          <label class="label" for="-contact-subject">Subject *</label>
+          <label class="label" for="-contact-subject">Subject <span class="asterisk-required">*</span></label>
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+          <input type="text" class="contact-input contact-subject" name="contact-subject" id="contact-subject" >
         </div>
-        <input type="text" class="contact-input contact-subject" name="contact-subject" id="subject" required>
-
-
-        <div class="contact-label">
+        
+        <div class="contact-box">
           <span class="fa fa-comment"></span>
-          Message *
+          <label class="label" for="-contact-subject">Message <span class="asterisk-required">*</span></label>
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+          <small></small>
+          <textarea class="contact-input contact-text-area" name="contact-message" cols="40" rows="4" id="contact-message" ></textarea>
         </div>
-        <textarea class="contact-input contact-text-area" name="contact-message" cols="40" rows="4" id="contact-message" required></textarea>
-
+        
         <button class="btn contact-submit-btn" type="submit">Send</button>
       </form>
     
@@ -105,16 +116,10 @@
       <span class="fa fa-phone"></span>
       <span class="fa fa-paper-plane"></span>
       <span class="fa fa-globe"></span>
-      <span class="fa fa-user"></span>
-      <span class="fa fa-mobile-phone"></span>
-      <span class="fa fa-info"></span>
-
     </div>
 
   </div>
 </div>
 
-<script src="<?php URLROOT; ?>public/js/contact-submission.js"></script>
-<script src="<?php URLROOT; ?>public/js/popper.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="<?php URLROOT; ?>public/js/google-map.js"></script>
+<script src="<?php URLROOT; ?>public/js/contact-validation.js"></script>
+<!-- <script src="<?php URLROOT; ?>public/js/google-map.js"></script> -->
