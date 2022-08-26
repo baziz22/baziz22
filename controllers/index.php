@@ -17,4 +17,20 @@ class Index extends Controller
     {
         $this->view->render('pages/test');
     }
+    public function logout() {
+        Session::destroy();
+        $this->view->render('pages/sub/logout');
+        //header('Location:' . URLROOT .'index');
+        exit;
+    }
+    public function other($arg = false) {
+        $this->view->render('pages/sub/other');
+        echo 'we are inside other <br />';
+        echo 'Optional: ' . $arg . '<br />' ;
+
+        require 'models/help_model.php';
+        $model = new Help_Model();
+        print_r($model->blah());
+        $this->view->blah = $model->blah();
+    }
 }

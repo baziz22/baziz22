@@ -17,9 +17,9 @@ class Dashboard extends Controller{
     public function index() {
         $this->view->render('pages/dashboard');
     }
-    public function logout() {
+    /* public function logout() {
         Session::destroy();
         header('Location:' . URLROOT .'index');
         exit;
-    }
+    } */
 }

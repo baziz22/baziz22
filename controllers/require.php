@@ -12,10 +12,15 @@ require 'libs/View.php';
 require 'libs/Model.php';
 require 'libs/Session.php';
 require 'libs/Database.php';
-
+/* require 'libs/PHPMailer/Exception.php';
+require 'libs/PHPMailer/PHPMailer.php';
+require 'libs/PHPMailer/SMTP.php'; */
 require_once 'config/config.php';
 
 require_once 'helpers/session_helper.php';
+
+
+
 
 
 $app = new Core();
