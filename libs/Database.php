@@ -13,7 +13,7 @@ class Database
     private $error;
     function __construct()
     {
-       
+      
     }
     public function connect()
     {
@@ -21,7 +21,7 @@ class Database
         // DSN basically a string that has associated data structure to describe a connection to a data source.
         // It is going to describe what exact type of database, what sort of host, what the database name, we're going to be using.
 
-        echo 'Checking Connection!';
+        //echo 'Checking Connection!';
         try {
             $dsn = $this->dbType . ':host=' . $this->dbHost . ';dbname=' . $this->dbName;
             // Create a PDO instance
@@ -83,5 +83,19 @@ class Database
     //Get's the row count
     public function rowCount() {
         return $this->statement->rowCount();
+    }
+    /* public function userList() {
+        $sql = "SELECT user_id, user_name, user_role FROM users";
+        $stmt = $this->db->connect()->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        return $data;
+    } */
+    public function pagination($start_from, $per_page_record){
+      $query = "SELECT * FROM users LIMIT $start_from, $per_page_record";
+      $stmt = $this->db->connect()->prepare($query);
+      $stmt->execute();
+      $data = $stmt->rowCount();
+      return $data;
     }
 }

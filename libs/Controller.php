@@ -15,12 +15,12 @@ class Controller {
         $modelext = '_model';
         $path = 'models/' . $name . $modelext . '.php';
         if(file_exists($path)) {
-            echo 'File _model exists' . BR;
-            echo $path . BR;
-            require 'models/' . $name . $modelext . '.php';
-            echo '$name: ' . $name . BR;
+            //echo 'File _model exists' . BR;
+            //echo $path . BR;
+            require_once 'models/' . $name . $modelext . '.php';
+            //echo '$name: ' . $name . BR;
             $model_name = $name.$modelext;
-            echo '$model Name: ' . $model_name . BR;
+            //echo '$model Name: ' . $model_name . BR;
             $this->model = new $model_name;
         } else {
             echo "File not exists _model";
