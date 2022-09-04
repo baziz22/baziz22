@@ -110,9 +110,7 @@
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">Open Modal</button> -->
 <!-- <button id='about-website-btn'><i class="fas fa-question-circle"></i></button> -->
-<i id="question-mark" class="fas fa-question-circle"></i>
-<i id="popup-chat" class="far fa-comment-alt"></i>
-<a href="#section-two"><i id="arrow-slider" class="fas fa-angle-double-down"></i></a>
+
 <!-- The Modal -->
 <div id="about-website-modal" class="about-website-modal">
   <!-- Modal content -->
@@ -123,12 +121,12 @@
     </div>
     <div class="about-website-modal-body">
       <ul>
-        <li>HTML: for instruct the blue print</li>
+        <li>HTML: for instructing the blue print</li>
         <li>CSS: to make it styled</li>
         <li>Vanilla JS: to interact with the website</li>
         <li>PHP: backend security and interact with the DB</li>
         <li>MySQL: backend storing data</li>
-        <li>Python: backend analyzing and statistics</li>
+        <li>D3.js: for data analysis and visualizations</li>
         <li>To Do: </li>
         <li>fix the info section</li>
         <li>change the scroll down icon.</li>
@@ -136,11 +134,10 @@
         <li>do API</li>
         <li>do Lobby</li>
         <li>do Blog</li>
-        <li>delete contact</li>
-
+        <li>Version 2 is gonna have much better styling and more interactive with projects, Stay Tones!</li>
       </ul>
-      <p>MVC and OOP for arranging the website</p>
-      <p>Note: This website is still in development process!</p>
+      <p>MVC and OOP for arranging the website files and folders</p>
+      <p>Note: the website version is alpha and still in development process!</p>
     </div>
     <div class="about-website-modal-footer">
       <h3>More info Click Me!.</h3>
@@ -154,7 +151,7 @@
   var modal = document.getElementById("about-website-modal");
 
   // Get the button that opens the modal
-  var btn = document.getElementById("question-mark");
+  var btn = document.getElementById("info-mark");
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close-modal-btn")[0];

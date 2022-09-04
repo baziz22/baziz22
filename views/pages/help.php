@@ -6,6 +6,12 @@
         <i class="fas fa-map-marked-alt"></i>
         <i class="fas fa-info-circle"></i>
         <i class="fas fa-copyright"></i>
+        <span class="fa fa-user"></span>
+      <span class="fa fa-mobile-phone"></span>
+      <span class="fa fa-info"></span>
+      <span class="fa-brands fa-twitter"></span>
+      <span class="fas fa-exclamation-circle"></span>
+      <a href="https://www.youtube.com/watch?v=Aw28-krO7ZM&list=RDCMUCFfuK45zBZxhq0m1bxYP-Zw&start_radio=1&rv=Aw28-krO7ZM&t=13">HELP</a>
         </div>
     </section>
 </div>

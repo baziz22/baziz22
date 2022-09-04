@@ -24,9 +24,10 @@
     // ####################################################################
 
     const textDisplay = document.getElementById('type_text');
-    //const phrases = ['Welcome to my personal website.'];
-    const phrases = ['Welcome to my personal website.', 'My name is Bader Binsunbil.', 'I am a Full Stack Developer.', 'System Engineer Assistant.', 'Computer Network Technician.', 'IT Specialist.'];
-    //const phrases = ['W']
+    const phrases = ['Welcome to my personal website.'];
+    //const phrases = ['Welcome to my personal website.', 'My name is Bader Binsunbil.', 'I am a Full Stack Developer.', 'System Engineer Assistant.', 'Computer Network Technician.', 'IT Specialist.'];
+    /* const phrases = ['W'] */
+    //const phrases = ['Welcome to my personal website.', 'My name is Bader Binsunbil.']
     let i = 0
     let j = 0
     let currentPhrase = []
@@ -71,12 +72,12 @@
                     var unfade = document.getElementById('myInfo');
                     var logo_svg = document.getElementById("logo-svg");
                     //logo_svg.style.marginTop = 0;
-                    logo_svg.style.transform = "translate(10rem, -16.5rem)";
+                    logo_svg.style.transform = "translate(-40rem, 0rem)";
                     logo_svg.style.transition = "all 4s";
                     //document.querySelector("#myInfo").innerHTML = `Bader Binsunbil`;
-                    document.querySelector("#myInfo-img").src = `<?php URLROOT; ?>public/images/bb.svg`;
-                    unfade.classList.add("fade");
-                    document.querySelector("#mySkills").classList.add('fade');
+                    document.querySelector("#myInfo-img").src = `<?php URLROOT; ?>public/images/logo/bb.svg`;
+                    unfade.classList.add("info-fade");
+                    document.querySelector("#mySkills").classList.add('skills-fade');
                 }
             }
         }

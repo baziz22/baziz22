@@ -8,6 +8,7 @@
     <div id="first_line_page">
         <h1>Page Not Found 404</h1>
         <p>You will be directed to the main page in 3 seconds</p>
+        <p>Bader Binsunbil</p>
     
     
     <?php
