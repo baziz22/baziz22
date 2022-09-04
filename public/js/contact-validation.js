@@ -1,52 +1,73 @@
+'use strict'
+
 const contact_form = document.getElementById('contact-form');
 const contact_full_name = document.getElementById('contact-full-name');
 const contact_subject = document.getElementById('contact-subject');
 const contact_email = document.getElementById('contact-email');
 const contact_message = document.getElementById('contact-message');
+const contact_submit_btn = document.getElementById('contact-submit-btn');
+
+
 
 contact_form.addEventListener('submit', e => {
-  e.preventDefault();
-  validate();
+  (validate()) ? e.currentTarget.submit()
+  : e.preventDefault();
+  
 });
-
+let errors = 1;
 function validate() {
-  // get the values from the inputs
-  const full_nameValue = contact_full_name.value.trim();
-  const emailValue = contact_email.value.trim();
-  const subjectValue = contact_subject.value.trim();
-  const messageValue = contact_message.value.trim();
-
-  if (full_nameValue === '') {
-    // show error
-    // add error class
-    setErrorFor(contact_full_name, 'Your Name is REQUIRED!');
-  } else {
-    // add success class
-    setSuccessFor(contact_full_name);
+  if(errors == 1) {
+    // get the values from the inputs
+    const full_nameValue = contact_full_name.value.trim();
+    const emailValue = contact_email.value.trim();
+    const subjectValue = contact_subject.value.trim();
+    const messageValue = contact_message.value.trim();
+    
+    if (full_nameValue === '') {
+      // show error
+      // add error class
+      setErrorFor(contact_full_name, 'Your Name is REQUIRED!');
+      errors = 1;
+    } else {
+      // add success class
+      setSuccessFor(contact_full_name);
+      errors = 0;
+    }
+    if (emailValue === '') {
+      setErrorFor(contact_email, 'Email cannot be empty. REQUIRED!');
+      errors = 1;
+    } else if (!isEmail(emailValue)) {
+      setErrorFor(contact_email, 'Email is not valid!');
+      errors = 1;
+    } else {
+      setSuccessFor(contact_email);
+      errors = 0;
+    }
+    if (subjectValue === '') {
+      // show error
+      // add error class
+      setErrorFor(contact_subject, 'Enter a topic that reflects your message content. REQUIRED!');
+      errors = 1;
+    } else {
+      // add success class
+      setSuccessFor(contact_subject);
+      errors = 0;
+    }
+    if (messageValue === '') {
+      // show error
+      // add error class
+      setErrorFor(contact_message, 'How can I help you?! REQUIRED!');
+      errors = 1;
+    } else {
+      // add success class
+      setSuccessFor(contact_message);
+      errors = 0;
+    }
+    //let bader = setTimeout(check_me(), 2000);
+    
+    if(errors == 0) return true;
   }
-  if (emailValue === '') {
-    setErrorFor(contact_email, 'Email cannot be empty. REQUIRED!');
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(contact_email, 'Email is not valid!');
-  } else {
-    setSuccessFor(contact_email);
-  }
-  if (subjectValue === '') {
-    // show error
-    // add error class
-    setErrorFor(contact_subject, 'Enter a topic reflects your message. REQUIRED!');
-  } else {
-    // add success class
-    setSuccessFor(contact_subject);
-  }
-  if (messageValue === '') {
-    // show error
-    // add error class
-    setErrorFor(contact_message, 'How can I help you?! REQUIRED!');
-  } else {
-    // add success class
-    setSuccessFor(contact_message);
-  }
+  return false;
 }
 
 function setErrorFor(input, message) {

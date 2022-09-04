@@ -1,12 +1,8 @@
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500";
-@import "https://fonts.googleapis.com/css?family=Raleway:400";
 .main_container {
 	/* border: 1px solid black; */
 }
 .first_page_scroll{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	
 }
 
 #api-pic {
@@ -43,8 +39,7 @@
 }
 .api-navigation ul {
 	display: flex;
-	width: 450px;
-  /* border: 1px solid black; */
+	/* border: 1px solid black; */
 }
 .api-navigation ul li{
   /* border: 1px solid green; */
@@ -63,6 +58,7 @@
 	width: 100%;
 	text-align: center;
 	font-weight: 500;
+	cursor: pointer;
 }
 .api-navigation ul li a .api-icon{
 	position: relative;
@@ -116,7 +112,7 @@
 }
 .api-navigation ul .api-list:nth-child(5).api-active ~ .api-indicator{
 	transform: translateX(calc(70px * 4));
-}
+}/* 
 .api-navigation ul .api-list:nth-child(6).api-active ~ .api-indicator{
 	transform: translateX(calc(70px * 5));
-}
+} */

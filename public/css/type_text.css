@@ -5,19 +5,25 @@
   }
 
 #text-area {
-  
+  /* 
   position: absolute;
-  top: 16rem;
-  left: 1rem;
+  top: 10rem;
+  left: 1rem; */
+  /* position: absolute;
+  bottom: 40%;
+  left: 25%; */
+  transform: translateY(150%);
+  padding-left: 10px;
 }
 #type_text{
   display: inline-block;
   /* border: solid black 2px; */
-  font-size: clamp(1rem, 5vw, 6rem);
+  font-size: clamp(1rem, 5vw, 5rem);
     /* font-size: 2rem; */
     font-family: Tox, 'Courier New', Courier, monospace;
     /* margin: auto 0; */
     border-right: solid black 2px;
+    
 }
 .dynamic-span {
   font-size: clamp(1rem, 3vw, 4rem);

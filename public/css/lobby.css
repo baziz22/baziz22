@@ -101,7 +101,7 @@
 .lobby-navigation ul .api-list:nth-child(3).api-active ~ .api-indicator{
 	transform: translateX(calc(70px * 2));
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
 	#main-content-lobby{
 		/* border: 5px solid red; */
 		width: 30em;

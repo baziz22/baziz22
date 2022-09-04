@@ -1,5 +1,5 @@
-* {box-sizing: border-box}
-body { margin:0}
+/* * {box-sizing: border-box}
+body { margin:0} */
 
 .mySlides {display: none}
 img {vertical-align: middle;}
@@ -90,6 +90,6 @@ img {vertical-align: middle;}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 768px) {
   .prev, .next,.text {font-size: 11px}
 }
