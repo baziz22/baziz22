@@ -2,13 +2,12 @@
 
 class User_Model extends Model{
     function __construct() {
-        echo 222;
-        // عقم لكي لا يسيؤا أستخدامة
+        //echo 222;
         parent::__construct();
         // sanatize the  so they can't abuse it.
     }
     public function userList() {
-        $sql = "SELECT id, user_name, role FROM users";
+        $sql = "SELECT user_id, user_name, user_role, user_status FROM users";
         $stmt = $this->db->connect()->prepare($sql);
         $stmt->execute();
         $data = $stmt->fetchAll();
@@ -18,8 +17,8 @@ class User_Model extends Model{
         //echo  BR. 'u: '.$username . BR;
         //echo 'p: '.$pass . BR;
         //echo 'r: '.$the_role . BR;
-        
-        $sql = "INSERT INTO `users` (user_name, password, role) VALUES (:username, :password, :role)";
+        pre_r($data);
+        $sql = "INSERT INTO `users` (user_name, user_email, user_password, user_role) VALUES (:username, :email, :password, :role)";
         $stmt = $this->db->connect()->prepare($sql);
         //$this->$stmt->bindParam(':username',$username, ':password',$password, ':role',$role);
         //$stmt->bindValue(1, $is_);
@@ -27,55 +26,129 @@ class User_Model extends Model{
         //$stmt->execute($username, $pass, $the_role);
         $stmt->execute(array(
             ':username' => $data['user_name'],
+            ':email' => $data['email'],
             ':password' => $data['password'],
             ':role' => $data['role']
         ));
     }
-
-    public function edit($id) {
-        /* $sql = 'UPDATE users SET role = :role WHERE id = :id';
+    public function edit($data) {
+      pre_r($data);
+      if($_SESSION['username'] != $data['username'] || Session::get('role') != "owner"){
+        return "Sorry, this is not your username!";
+      }else{
+        $sql = 'UPDATE users SET user_name = :username, user_email = :email, user_role = :the_role WHERE user_name = :username';
         $stmt = $this->db->connect()->prepare($sql);
-        $stmt->execute(
-            array(
-                ':id' => $id
-            )
-        ); */
+        $stmt->execute(array(
+            ':username' => $data['username'],
+            ':email' => $data['email'],
+            ':the_role' => $data['role']
+        ));
+      }
     }
-
     public function editSave($data) {
-        pre_r($data);
-        $sql = 'UPDATE users SET user_name = :username, password = :password, role = :the_role WHERE id = :id';
+        //pre_r($data);
+        $sql = 'UPDATE users SET user_name = :username, user_password = :password, user_role = :the_role WHERE user_id = :id';
         $stmt = $this->db->connect()->prepare($sql);
         $stmt->execute(array(
             ':id' => $data['id'],
-            ':username' => $data['user_name'],
+            ':username' => $data['username'],
             ':password' => $data['password'],
             ':the_role' => $data['role']
         ));
+        echo "<p>" . $data['username']." has been updated</p>";
         //header('Location:' . URLROOT . 'user');
     }
     public function userSingleList($id) {
-        $sql = "SELECT id, user_name, role FROM users WHERE id = :id";
+        $sql = "SELECT user_id, user_name, user_status FROM users WHERE user_id = :id";
         $stmt = $this->db->connect()->prepare($sql);
         $stmt->execute(array(
             ':id' => $id
         ));
         $data = $stmt->fetch();
         return $data;
-    }
-
-
-    public function delete($id){
-        $sql = 'DELETE FROM users WHERE id = :id';
-        $stmt = $this->db->connect()->prepare($sql);
-        //$stmt->bindValue($id);
-        //$stmt->execute([$id, $author]);
-        $stmt->execute(
+    }    
+    public function activate_user($id){
+        if($_SESSION['user_id'] == $id || Session::get('role') == "owner"){
+          $sql = 'UPDATE users SET user_status = 1 WHERE user_id = :id';
+          $stmt = $this->db->connect()->prepare($sql);
+          //$stmt->bindValue($id);
+          //$stmt->execute([$id, $author]);
+          /* $stmt->execute(
+              array(
+                  ':id' => $id
+              )
+          ); */
+          if($stmt->execute(
             array(
                 ':id' => $id
             )
-        );
+          )){
+            return "activated true";
+          } else {
+            return "You have not permission to activate this user";
+          }
+          
+        /* }else{
+          echo "You have not permission to activate this user";
+        } */
+      }
+        
     }
-    
-    
+    public function delete($id){
+      /* echo $id;
+      die(); */
+      if($_SESSION['user_id'] == $id || Session::get('role') == "owner"){
+        $sql = 'DELETE FROM users WHERE user_id = :id';
+        $stmt = $this->db->connect()->prepare($sql);
+        if($stmt->execute(
+          array(
+              ':id' => $id
+          )
+        )){
+          Session::destroy();
+          echo "We are so sad that you leave.";
+          echo "We are gonna miss you!";
+          echo "Please register back!";
+          //header('Location: ../' . URLROOT .'index');
+          header("Refresh:5; url=../../".URLROOT);
+         // exit;
+        }/*  else {
+          //header('Location: ' . URLROOT . '../user&message=not-deleted');
+          //return "You deleted you account";
+        } */
+      } else {
+        echo "Not deleted";
+      }
+    }
+    public function total_records(){
+      $query = "SELECT * FROM users";
+      $stmt = $this->db->connect()->prepare($query);
+      $stmt->execute();
+      $data = $stmt->rowCount();
+      return $data;
+    }
+    public function pagination($start_from, $per_page_record){
+      $query = "SELECT * FROM users LIMIT $start_from, $per_page_record";
+      $stmt = $this->db->connect()->prepare($query);
+      $stmt->execute();
+      $data = $stmt->rowCount();
+      return $data;
+    }
+    public function records_all(){
+      $sql = "SELECT * FROM users";
+        $stmt = $this->db->connect()->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        /* for ($i=0; $i < count($data); $i++) {
+          echo "<pre>"; 
+          echo($data[0]['user_id']);
+          echo "</pre>"; 
+        } */
+        //echo($data[0]['user_id']);
+        //var_dump( $data);
+        return $data;
+    }
+    public function print_something(){
+      echo "Something";
+    }
 }
