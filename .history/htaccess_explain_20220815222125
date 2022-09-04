@@ -1,0 +1,6 @@
+
+        
+RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+QSA: Query String Append
+^(.+)$: of anything
+index.php: send it to index.php

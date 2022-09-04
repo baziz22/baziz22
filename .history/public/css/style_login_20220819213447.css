@@ -1,0 +1,192 @@
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+/* Set a style for all buttons */
+button {
+  border-radius: 5px;
+  background-color: rgba(0, 136, 169, 1);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.error-message, .form-message-warning {
+  font-size: smaller;
+  color: red;
+ 
+}
+.fa-circle-check:before{
+  display: none;
+  content: "\f057";
+  content: "\f057";
+}
+.fa-circle-xmark:before{
+  display: none;
+}
+.form-message-warning, .form-message-success {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  border-radius: 3px;
+  color: white;
+  border: 1px solid orangered;
+  background-color: rgba(252, 25, 25, 0.8);
+  /* background-color: rgba(0, 136, 169, 0.8); */
+}
+.success, .form-message-success {
+  color: white;
+  border: 1px solid green;
+  background-color: rgba(14, 179, 14, 1);
+}
+.invalidFeedback {
+  color: #ff0000;
+}
+.signup-error {
+  text-align: center;
+  border: 1px, solid, red;
+  padding: 10px;
+  color: red;
+}
+.cancel-btn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  display: none;
+}
+.register-btn {
+  width: auto;
+  padding: 10px 10px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.remember-me {
+  position: relative;
+  border: 1px solid goldenrod;
+}
+
+.remember-me-checkbox {
+  accent-color: red;
+}
+
+#forget-password {
+  float:right;
+  padding-right: 15px;
+}
+
+.modal-footer-login {
+  border-radius: 2rem;
+  padding: 8px;
+}
+
+span.psw {
+  color: #04AA6D;
+  
+  padding-top: 10px;
+}
+
+span.psw a {
+  color: #04AA6D;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  font-size: 1rem;
+  background: linear-gradient(to right bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.5));
+  border-radius: 2rem;
+  /* background-color: red; 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  min-width: 300px; /* Could be more or less, depending on screen size */
+  max-width: 300px;
+  
+  background-color: red;
+  position: absolute;
+  right: 0vw;
+  top: 0vh;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.3s;
+  animation: animatezoom 0.3s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 768px) {
+  span.psw {
+     /* display: block; */
+     /* float: none; */
+  }
+  .modal-content {
+    width: 80%;
+  }
+  .cancel-btn {
+     width: 100%;
+  }
+}

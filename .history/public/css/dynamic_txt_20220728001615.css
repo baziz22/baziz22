@@ -1,0 +1,44 @@
+.wrapper{
+    font-family: Tox, sans-serif;
+    
+  }
+  
+  .wrapper .dynamic-txts{
+    height: 90px;
+      line-height: 100px;
+      overflow: hidden;
+    }
+  .dynamic-txts .dynamic-li{
+    list-style: none;
+    color: #fc6d6d;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 7.5s steps(5) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -505px;
+    }
+  }
+  .dynamic-txts .dynamic-li .dynamic-span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+  }
+  .dynamic-txts .dynamic-li .dynamic-span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100%);
+    }
+    100%{
+      left: 0;
+    }
+  }

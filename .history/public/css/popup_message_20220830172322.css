@@ -1,0 +1,115 @@
+/* font-family: righteous; */
+.popup-modal{
+  display: none;
+  position: fixed;
+  z-index: 1500;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-color: linear-gradient(to top left, rgba(255, 255, 255, 0.9), rgb(255 185 185 / 95%));
+}
+
+.popup-window {
+  width: 300px;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 25px -3px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  opacity: 0;
+  transform: translate(0%, -250%) scale(0.1);
+  transition: transform 0.7s, top 0.7s;
+  z-index: 10;
+  /* border: 1px solid black; */
+}
+.open-popup-window {
+  opacity: 1;
+  transition: transform 0.3s, top 0.4s;
+  transform: translate(0%, -50%) scale(1);
+}
+.popup-window img{
+  transform: translate(0%, -30%);
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+}
+.popup h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 30px 0 10px; 
+}
+
+.popup-header {
+  width: 100%;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(0%, -60%);
+}
+
+.popup-header h3,
+.popup-header #popup-close {
+  font-size: 1.3rem;
+  color: #0d47a1;
+}
+.popup-window p {
+  font-size: 1rem;
+  color: #0d47a1;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  transform: translate(0%, -80%);
+}
+
+#popup-close {
+  padding: 5px;
+  background: #e1e1e1;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+#popup-close:hover {
+  background: #ff4860;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.submit {
+  padding: 8px 0;
+  width: 85%;
+  background: #03a9f4;
+  border-radius: 5px;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transform: translate(0%, -80%);
+}
+
+.submit:hover {
+  background: #0d47a1;
+}
+
+#link {
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-decoration-color: #ff4860;
+  background-color: #03a9f4;
+  padding: 8px 16px;
+}
+
+#link:hover {
+  text-decoration: underline;
+}

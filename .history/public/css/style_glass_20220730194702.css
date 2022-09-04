@@ -1,0 +1,69 @@
+main {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 0.6rem;
+  /* margin: 10% 10%; */
+  color: #426696;
+  /* border: 3px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+  box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.8);
+    border: 3px solid blueviolet;
+  
+  /*  border: 3px solid green; */
+  
+  /* mobile viewport bug fix */
+  /* min-height: -webkit-fill-available; */
+  /* min-height: 80vh; */
+  width: 100%;
+  height: 100%;
+}
+#section-two .card{
+  
+}
+#section-three .card{
+    
+}
+.card-info {
+  padding: 5px;
+  margin: 2em;
+  text-align: center;
+  color: #426696;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+    width: 100%;
+  height: 100%;
+}
+
+.conclusion-card, .card-cv{
+  color: #426696;
+  padding: 1em;
+  margin: 2em;
+  width: 85%;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+}
+.card-cv {
+  width: 80%;
+  border-radius: 5px;
+}
+.cv-list a {
+  text-decoration: none;
+  color: #426696;
+}
+.img-curve {
+  border-radius: 20px;
+}

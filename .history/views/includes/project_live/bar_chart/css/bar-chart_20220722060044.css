@@ -1,0 +1,16 @@
+.svg-container {
+  
+}
+#g-main-barchar-scale-axis {
+    background-color: #F5F2EB;
+    border: 1px solid #CCC;
+}
+  .bar {
+shape-rendering: crispEdges;
+}
+  .gridline path,
+.gridline line{
+fill: none;
+stroke: #ccc;
+shape-rendering: crispEdges;
+}

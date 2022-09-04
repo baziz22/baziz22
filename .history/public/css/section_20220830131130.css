@@ -1,0 +1,236 @@
+.main_container {
+  height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: y proximity; */
+  /* overflow-y: scroll; */
+}
+section {
+  height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  scroll-snap-align: start;
+  /* display: flex; */
+  position: relative;
+
+  background-color: var(--background);
+}
+
+/* Google it 
+    practical css scroll snapping css-tricks
+ */
+
+/* section 1 */
+
+.circle1 {
+  /* margin: 0;
+  padding: 0;
+  
+  height: 30rem;
+  width: 30rem;
+  position: absolute;
+  top: 5%;
+  right: 5%; */
+  position: relative;
+  top: 15%;
+  border-radius: 50%;
+  transition: all 0.5s linear;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1)
+  );
+  justify-self: end;
+  width: 400px;
+  height: 400px;
+  margin: -4%
+}
+
+@media screen and (max-width: 768px) {
+    .blob-motion {
+    
+  }
+  #mySkills {
+    transform: translateX(40px);
+  }
+  #myInfo {
+    opacity: 0;
+    transform: translate(10px, -40px);
+  }
+}
+#blob-motion {
+  /* position: relative;
+  transform: translateX(0%);
+  left: -15%;
+  background-color: transparent;
+  z-index: 0; */
+  /* bottom: 15%;
+  left: 15%;
+  transform: translateY(60%);
+  transform: translateX(-20%); */
+}
+#svg-text {
+  /* fill: yellowgreen; */
+}
+#blob1 {
+  /* fill: orange; */
+  /* transform: translateX(-20%); */
+}
+#myInfo {
+  opacity: 0;
+}
+.blob-motion {
+  /* border: 1px solid pink; */
+}
+#myInfo.info-fade {
+  opacity: 1;
+  transition: ease-in 0.75s;
+}
+
+#mySkills {
+  opacity: 0;
+}
+#mySkills.skills-fade {
+  opacity: 1;
+  transition: ease-in 0.75s;
+}
+
+#info-mark {
+  /* position: absolute;
+  bottom: 25px;
+  left: 10px; */
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  color: black;
+  cursor: pointer;
+  /* content: 'f6af';
+    font-family: 'Font Awesom 5 Free'; */
+}
+
+.popup-chat {
+  /* position: absolute; */
+  /* bottom: 25px;
+  right: 10px; */
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+  /* content: 'f6af';
+    font-family: 'Font Awesom 5 Free'; */
+}
+#popup-chat {
+  /* position: absolute; 
+      bottom: 25px;
+    right: 10px; */
+}
+#arrow-slider {
+  /* position: absolute; */
+  color: #bb004b;
+  /* left: 50%;
+  bottom: 40px; */
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  font-size: 30px;
+  /* content: 'f6af';
+    font-family: 'Font Awesom 5 Free'; */
+  scroll-behavior: smooth;
+  -webkit-animation: scrolling 3s ease infinite;
+  -moz-animation: scrolling 3s ease infinite;
+  -o-animation: scrolling 3s ease infinite;
+  animation: scrolling 3s ease infinite;
+}
+#arrow-slider:hover {
+  color: black;
+}
+@keyframes scrolling {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+#logo-svg {
+  margin: 0 1rem;
+  position: relative;
+  top: 1em;
+  max-width: clamp(3.5em, 3vw, 6em);
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center; */
+}
+
+/****** nav aside ******/
+.navigation-right-side {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  min-height: 2rem;
+  margin-right: 0.5em;
+  border-radius: 1rem;
+}
+.nav-aside {
+  background: var(--bg_glassy);
+  height: 0.25em;
+  width: 2em;
+  border-radius: 5px;
+  position: relative;
+}
+.nav-aside:hover {
+  box-shadow: 0 0 25px 0 black;
+  background: var(--bg3);
+  transition: 0.3s;
+}
+.nav-aside:nth-child(1).nav-aside-active ~ .nav-aside {
+  transform: translateX(calc(70px * 0));
+}
+/******Enf of nav aside ******/
+
+@media screen and (max-width: 1280px) {
+  .circle1 {
+    height: 24rem;
+    width: 24rem;
+    transition: all 0.5s linear;
+    
+  }
+}
+@media screen and (max-width: 980px) {
+  .circle1 {
+    height: 22rem;
+    width: 22rem;
+    transition: all 0.5s linear;
+    top: -10%;
+    right: -2%;
+  }
+}
+}
+@media screen and (max-width: 768px) {
+  .circle1 {
+    height: 300px;
+    width: 300px;
+    transition: all 0.5s linear;
+    
+  }
+}
+@media screen and (max-width: 300px) {
+  .circle1 {
+    height: 12rem;
+    width: 12rem;
+    transition: all 0.3s linear;
+
+  }
+}

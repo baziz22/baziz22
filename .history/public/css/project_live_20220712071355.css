@@ -1,0 +1,38 @@
+
+.projects-live-container {
+    display: grid;
+    /* padding: 1rem; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+  }
+  .projects-live-container img {
+    width: 30%;
+    height: 30%;
+  }
+  .projects-live-container h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .projects-live-container .day {
+    background-color: rebeccapurple;
+    border-bottom-left-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .projects-live-container > div {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+  }
+  .projects-live-container div:hover .projects-live-content {
+    opacity: 0.98;
+  }
+  
+  

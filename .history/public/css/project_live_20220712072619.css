@@ -1,0 +1,7 @@
+
+div.projects-live-container {
+    display: grid;
+    /* padding: 1rem; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}

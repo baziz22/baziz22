@@ -1,0 +1,80 @@
+#project-info {/* 
+  
+}
+main {
+  font-family: "Poppins", sans-serif;
+  /* margin: 10% 10%; */
+  width: 100%;
+  color: #426696;
+  /* border: 3px solid black; */
+}
+
+.glass {
+  z-index: 3;
+  background: white;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  width: 100%;
+  backdrop-filter: blur(0.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: linear-gradient(to top right, #65dfc9, #6cdbeb); */
+  /* border: 1px solid yellowgreen; */
+}
+/* Games */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.9)
+  );
+ 
+  box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.8);
+  /* border-radius: 40px; */
+}
+#section-two .card{
+  width: 100%;
+  height: 100%;
+}
+#section-three .card{
+    border-radius: 0;
+}
+
+/* Games */
+#section-two{
+}
+.card-info {
+  padding: 5px;
+  margin: 2em;
+  text-align: center;
+  color: #426696;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+}
+
+.conclusion-card, .card-cv{
+  color: #426696;
+  padding: 1em;
+  margin: 2em;
+  width: 85%;
+  font-size: clamp(1rem, 3vw, 2rem);
+    /* font-size: 2rem; */
+    font-family: Tox, 'Courier New', Courier, monospace;
+}
+.card-cv {
+  width: 80%;
+  border-radius: 5px;
+}
+.cv-list a {
+  text-decoration: none;
+  color: #426696;
+}
+.img-curve {
+  border-radius: 20px;
+}

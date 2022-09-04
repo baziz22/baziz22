@@ -1,0 +1,3 @@
+class Sendemail_Model {
+    
+}

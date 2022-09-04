@@ -1,0 +1,113 @@
+#main-content-lobby{
+	font-family: Ubuntu;
+	/* border: 5px solid red; */
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+    width: 56em;
+	height: 32em;
+    background: #fff;
+	border-radius: 10px;
+}
+#lobby-pic {
+	min-height: 6rem;
+	background-color: #27344b;
+    text-align: center;
+	/* border: 5px solid blue; */
+	border-radius: 10px;
+}
+#profile-image {
+	height: 12rem;
+	width: 12rem;
+    border: solid thick white;
+	outline: 1px solid red;
+    border-radius: 50%;
+}
+#api-info{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	min-height: 10rem;
+	/* border: 5px solid green; */
+}
+.lobby-navigation {
+	/* border: 1px solid black; */
+	border-top: 5px solid var(--bg);
+	position: relative;
+	min-height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items:flex-end;
+}
+.lobby-navigation ul {
+	display: flex;
+	width: 350px;
+  /* border: 1px solid black; */
+}
+.lobby-navigation ul li{
+  /* border: 1px solid green; */
+	position: relative;
+	list-style: none;
+	width: 70px;
+	height: 70px;
+	z-index: 1;
+}
+.lobby-navigation ul li a{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+.lobby-navigation ul li a .api-icon{
+	position: relative;
+	display: block;
+	line-height: 78px;
+	font-size: 25px;
+	text-align: center;
+	transition: 0.5s;
+	color: var(--clr);
+}
+.lobby-navigation ul li.api-active a .api-icon{
+	color: var(--bg);
+	transform: translateY(-45px);
+}
+.lobby-navigation ul li a .api-text{
+	position: absolute;
+	color: var(--clr);
+	font-weight: 400;
+	font-size: .75em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.lobby-navigation ul li.api-active a .api-text{
+	color: var(--bg);
+	opacity: 1;
+	transform: translateY(5px);
+}
+.lobby-navigation ul .api-list:nth-child(1).api-active ~ .api-indicator{
+	transform: translateX(calc(70px * 0));
+}
+.lobby-navigation ul .api-list:nth-child(2).api-active ~ .api-indicator{
+	transform: translateX(calc(70px * 1));
+}
+.lobby-navigation ul .api-list:nth-child(3).api-active ~ .api-indicator{
+	transform: translateX(calc(70px * 2));
+}
+@media screen and (max-width: 050px) {
+	#main-content-lobby{
+		/* border: 5px solid red; */
+		width: 30em;
+		height: 32em;
+		background: #fff;
+		border-radius: 10px;
+	}
+
+}

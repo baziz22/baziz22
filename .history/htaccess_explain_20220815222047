@@ -1,0 +1,5 @@
+
+        
+RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+QSA: Query String Append
+^(.+)$: of anything
