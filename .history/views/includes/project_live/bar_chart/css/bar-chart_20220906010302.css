@@ -1,0 +1,52 @@
+#g-main-barchar-scale-axis {
+}
+.bar {
+  shape-rendering: crispEdges;
+}
+.gridline path,
+.gridline line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+/* Line Chart */
+.line {
+  fill: none;
+  stroke: green;
+  stroke-width: 2px;
+}
+#line-graph-div {
+  border: 1px solid green;
+}
+#line-graph-svg {
+  color: #aa6e00;
+}
+/* div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 60px;
+        height: 28px;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+      } */
+      .tooltip{
+        background:#eee;
+        box-shadow: 0 0 5px #999999;
+        color:#333;
+        /* display: block; */
+        opacity: 1;
+        font-size: 12px;
+        position:absolute;
+        top: 95px;
+        left: 130px;
+        padding: 10px;
+        text-align:center;
+        width: 80px;
+        z-index: 9999;
+        border: 1px so
+      }
+/* End of Line Chart */

@@ -1,0 +1,112 @@
+#g-main-barchar-scale-axis {
+}
+.bar {
+  shape-rendering: crispEdges;
+}
+.gridline path,
+.gridline line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+/* Line Chart */
+.line {
+  fill: none;
+  stroke: green;
+  stroke-width: 2px;
+}
+#line-graph-div {
+  border: 1px solid green;
+}
+#line-graph-svg {
+  color: #aa6e00;
+}
+/* div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 60px;
+        height: 28px;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+      } */
+      .tooltip{
+        background:#eee;
+        box-shadow: 0 0 5px #999999;
+        color:#333;
+        /* display: block; */
+        opacity: 0;
+        font-size: 12px;
+        position:absolute;
+        top: 95px;
+        left: 130px;
+        padding: 10px;
+        text-align:center;
+        width: 80px;
+        z-index: 9999;
+        border: 1px solid green;
+      }
+      .d3-tip {
+        font-family: "Bradley Hand", Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        padding: 10px;
+        pointer-events: none !important;
+        color: #203d5d;
+        box-shadow: 0 4px 20px 4px rgba(0, 20, 60, .1), 0 4px 80px -8px rgba(0, 20, 60, .2);
+        background-color: #fff;
+        border-radius: 20%;
+        
+      }
+      
+      /* Creates a small triangle extender for the tooltip */
+      .d3-tip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: #fff;
+        position: absolute;
+        pointer-events: none;
+        shape-rendering: crispEdges;
+      }
+      
+      /* Northward tooltips */
+      .d3-tip.n:after {
+        content: "▼";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+      }
+      
+      /* Eastward tooltips */
+      .d3-tip.e:after {
+        content: "◀";
+        margin: -4px 0 0 0;
+        top: 50%;
+        left: -8px;
+      }
+      
+      /* Southward tooltips */
+      .d3-tip.s:after {
+        content: "▲";
+        margin: 0 0 1px 0;
+        top: -8px;
+        left: 0;
+        text-align: center;
+      }
+      
+      /* Westward tooltips */
+      .d3-tip.w:after {
+        content: "▶";
+        margin: -4px 0 0 -1px;
+        top: 50%;
+        left: 100%;
+      }
+      /* End of Line Chart */
+
+      /* Geometric WolldD3 API */

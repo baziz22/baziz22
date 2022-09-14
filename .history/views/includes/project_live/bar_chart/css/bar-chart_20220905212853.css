@@ -1,0 +1,13 @@
+#g-main-barchar-scale-axis {
+}
+.bar {
+  shape-rendering: crispEdges;
+}
+.gridline path,
+.gridline line {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+/* Line Ca */
