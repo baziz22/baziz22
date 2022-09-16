@@ -76,11 +76,11 @@
           </div>
           <div class="dashboard-profile-full-name">
             <?php 
-              echo $_SESSION['username'];
+              echo $logged_username;
             ?>
           </div>
-          <!-- <div class="dashboard-profile-last-login">12-Aug-2022</div>
-          <div class="dashboard-profile-last-login">progress</div> -->
+          <div class="dashboard-profile-last-login">12-Aug-2022</div>
+          <div class="dashboard-profile-last-login">progress</div>
         </div>
         <div class="dashboard-footer">
           <span class="material-symbols-outlined"> copyright </span>

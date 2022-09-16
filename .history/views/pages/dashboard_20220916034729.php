@@ -76,7 +76,7 @@
           </div>
           <div class="dashboard-profile-full-name">
             <?php 
-              echo $_SESSION['username'];
+              echo  $_SESSION['username'];
             ?>
           </div>
           <!-- <div class="dashboard-profile-last-login">12-Aug-2022</div>

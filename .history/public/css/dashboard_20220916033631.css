@@ -82,14 +82,14 @@ button.btn-delete {
 } */
 .dashboard-sidebar {
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-row: 2 / 3;
     /* background-color: steelblue; */
     background-color: var(--bg_glassy);
     background: linear-gradient( to top left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9) );
 }
 .dashboard-main {
     grid-column: 2 / 3;
-    grid-row: 1 / 3;
+    grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
 }

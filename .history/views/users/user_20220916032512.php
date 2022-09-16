@@ -96,19 +96,12 @@
                   ?>
                 
                   <tr class="table-data">
-                    <td>
-                      <?= (isset($_GET['user_name'])) ? $_GET['user_name'] : $single_user_record['user_name'] ?></td>
-                    <td class="action-btn">
-                      <a href="#"><button class="btn btn-view"><i class="fa-solid fa-magnifying-glass"></i> View</button></a>
-                    </td>
-                    <td class="action-btn"><?= ($single_user_record['user_status'] == 1) ? '<button class="btn btn-status-inactive"><i class="fa-solid fa-square-check"></i> activated</button>' : '<a href="' . URLROOT . 'user/activate_user/' . $single_user_record['user_id'] . '"><button class="btn btn-status-activate"><i class="fa-solid fa-power-off"></i> activate</button></a>' ;
+                    <td><?= (isset($_GET['user_name'])) ? $_GET['user_name'] : $single_user_record['user_name'] ?></td>
+                    <td class="action-btn"><a href="#"><button class="btn btn-view"><i class="fa-solid fa-magnifying-glass"></i> View</button></a></td>
+                    <td class="action-btn"><?= ($single_user_record['user_status'] == 0) ? '<button class="btn btn-status-inactive"><i class="fa-solid fa-square-check"></i> activated</button>' : '<a href="' . URLROOT . 'user/activate_user/' . $single_user_record['user_id'] . '"><button class="btn btn-status-activate"><i class="fa-solid fa-power-off"></i> activate</button></a>' ;
                     ?>
                     </td>
-                    <td class="action-btn">
-                      <a href="<?= URLROOT . 'user/delete/' . $single_user_record['user_id'] ?>">
-                      <button class="btn btn-delete"><i class="fa-solid fa-trash-can"></i> Delete</button>
-                      </a>
-                    </td>
+                  <td class="action-btn"><a href="<?= URLROOT . 'user/delete/' . $single_user_record['user_id'] ?>"><button class="btn btn-delete"><i class="fa-solid fa-trash-can"></i> Delete</button></a></td>
                   </tr>
                 </table>
               </div>
@@ -222,13 +215,11 @@
                     <td><?= $value['user_status'] ?></td>
                     <td class="action-btn"><a href="#"><button class="btn btn-view"><i class="fa-solid fa-magnifying-glass"></i> View</button></a></td>
                     <td class="action-btn">
-                      <?php 
-                      if ($value['user_status'] == 1) {
-                        echo '<button class="btn btn-status-inactive"><i class="fa-solid fa-square-check"></i> activated</button>';
-                      } else {
-                        echo '<a href="' . URLROOT . 'user/activate_user/' . $value['user_id'] . '"><button class="btn btn-status-activate"><i class="fa-solid fa-power-off"></i> activate</button></a>';
-                      } 
-                      ?>
+                      <?php if ($value['user_status'] == 1) {
+                          echo '<button class="btn btn-status-inactive"><i class="fa-solid fa-square-check"></i> activated</button>';
+                        } else {
+                          echo '<a href="' . URLROOT . 'user/activate_user/' . $value['user_id'] . '"><button class="btn btn-status-activate"><i class="fa-solid fa-power-off"></i> activate</button></a>';
+                        } ?>
                     </td>
                     <td class="action-btn"><a href="<?php URLROOT . 'user/delete/' . $value['user_id'] ?>"><button class="btn btn-delete"><i class="fa-solid fa-trash-can"></i> Delete</button></a></td>
                   </tr>
